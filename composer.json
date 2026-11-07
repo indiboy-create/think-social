@@ -1,0 +1,58 @@
+{
+    "name": "youvision/think-social",
+    "description": "Social OAuth login for ThinkPHP 8, based on overtrue/socialite.",
+    "keywords": [
+        "thinkphp",
+        "socialite",
+        "oauth",
+        "social-login",
+        "wechat",
+        "qq",
+        "weibo"
+    ],
+    "homepage": "https://github.com/youvision/think-social",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "youvision"
+        }
+    ],
+    "require": {
+        "php": ">=8.0",
+        "overtrue/socialite": "^4.0",
+        "topthink/framework": "^8.0",
+        "topthink/think-helper": "^3.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.6|^10.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Youvision\\ThinkSocial\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Youvision\\ThinkSocial\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "php-http/discovery": true
+        }
+    },
+    "extra": {
+        "think": {
+            "services": [
+                "Youvision\\ThinkSocial\\SocialiteService"
+            ]
+        }
+    },
+    "scripts": {
+        "test": "phpunit"
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
